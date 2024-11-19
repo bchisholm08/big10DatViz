@@ -1,0 +1,11 @@
+---
+title: "exploratoryNtlPk_script"
+author: "Brady M. Chisholm"
+date: "2024-11-19"
+output: html_document
+---
+```{r}
+# load in data 
+parkDat <- 
+```
+
