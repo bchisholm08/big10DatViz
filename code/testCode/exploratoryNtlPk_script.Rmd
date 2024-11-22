@@ -5,7 +5,41 @@ date: "2024-11-19"
 output: html_document
 ---
 ```{r}
-# load in data 
-parkDat <- 
+# load data 
+parkDat <- read.csv("https://raw.githubusercontent.com/melaniewalsh/responsible-datasets-in-context/main/datasets/national-parks/US-National-Parks_RecreationVisits_1979-2023.csv") # insert html hyperlink 
 ```
+
+```{r}
+hist(parkDat$RecreationVisits)
+hist(parkDat$Year)
+```
+
+```{r}
+# check predictors fit 
+ggplot(parkDat, aes(RecreationVisits,Year)) +
+  geom_point()
+
+ggplot(parkDat, aes(RecreationVisits, Region)) +
+  geom_point()
+
+ggplot(parkDat, aes(Region,Year)) +
+  geom_point()
+
+summary(parkDat$RecreationVisits)
+
+summary(parkDat$Year)
+```
+
+```{r}
+ggplot(parkDat, aes(RecreationVisits)) +
+  geom_boxplot() +
+  scale_x_log10(guide = "axis_logticks") +
+  scale_y_log10(guide = "axis_logticks")
+```
+
+```{r}
+
+```
+
+
 
